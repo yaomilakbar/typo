@@ -83,6 +83,12 @@
     </div>
   {{- end }}
 
+  {{- if not .Params.disableComment -}}
+    <div class="single-comments">
+      {{ partial "disqus.html" . }}
+    </div>
+  {{- end -}}
+
   {{ if .Store.Get "hasMermaid" }}
   {{ $mermaidDarkTheme := default "dark" (or .Params.mermaidDarkTheme .Site.Params.mermaidDarkTheme) }}
   {{ $mermaidTheme := default "default" (or .Params.mermaidTheme .Site.Params.mermaidTheme) }}
