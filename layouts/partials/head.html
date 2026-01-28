@@ -40,11 +40,14 @@
 </title>
 
 <link rel="canonical" href="{{ .Permalink }}"/>
+<meta name="google-adsense-account" content="ca-pub-2819182379187499"/>
 
 {{ template "partials/opengraph.html" . }}
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2819182379187499" crossorigin="anonymous"></script>
 
 {{ if hugo.IsProduction }}
 {{ template "_internal/google_analytics.html" . }}
