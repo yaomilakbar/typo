@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {{/* Head start hook */}}
 {{ partial "functions/get_hook.html" (dict "hook" "head_start" "context" .) }}
@@ -11,6 +11,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ urls.JoinPath $faviconPath "favicon-32x32.png" }}">
 <link rel="icon" type="image/png" sizes="192x192" href="{{ urls.JoinPath $faviconPath "android-chrome-192x192.png" }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ urls.JoinPath $faviconPath "apple-touch-icon.png" }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 {{ with .OutputFormats.Get "rss" -}}
 {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
