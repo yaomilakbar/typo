@@ -1,1 +1,12 @@
 /* Place custom css here */
+.img-full img {
+ scale: 100%;
+}
+
+.img-small img {
+ scale: 60%;
+}
+
+.img-xsmall img {
+ scale: 40%;
+}
